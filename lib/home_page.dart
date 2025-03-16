@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mini_mart_app/components/mart_item_tile.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -48,7 +49,10 @@ class HomePage extends StatelessWidget {
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2),
                 itemBuilder: (context, index) {
-                  return MartItemTile();
+                  return MartItemTile(
+                      itemName: itemName,
+                      itemPrice: itemPrice,
+                      imagePath: imagePath);
                 },
               ),
             )
