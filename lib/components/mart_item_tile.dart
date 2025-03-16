@@ -5,12 +5,15 @@ class MartItemTile extends StatelessWidget {
   final String itemPrice;
   final String imagePath;
   final color;
-  const MartItemTile(
-      {super.key,
-      required this.itemName,
-      required this.itemPrice,
-      required this.imagePath,
-      this.color});
+  void Function()? onPressed;
+  MartItemTile({
+    super.key,
+    required this.itemName,
+    required this.itemPrice,
+    required this.imagePath,
+    this.color,
+    required this.onPressed,
+  });
 
   @override
   Widget build(BuildContext context) {
