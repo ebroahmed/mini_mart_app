@@ -27,6 +27,7 @@ class _IntroPageState extends State<IntroPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Column(
         children: [
           SizedBox(height: 20),
@@ -58,7 +59,7 @@ class _IntroPageState extends State<IntroPage> {
           ),
           Text(
             "Fresh item everyday",
-            style: TextStyle(color: Colors.grey),
+            style: GoogleFonts.poppins(color: Colors.grey),
           ),
         ],
       ),
