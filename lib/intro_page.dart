@@ -16,7 +16,7 @@ class _IntroPageState extends State<IntroPage> {
   void initState() {
     super.initState();
     // Set a timer to navigate to the ExplorePage after 3 seconds
-    Timer(const Duration(seconds: 4), () {
+    Timer(const Duration(seconds: 6), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => const HomePage()),
