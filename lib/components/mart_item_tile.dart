@@ -18,8 +18,7 @@ class MartItemTile extends StatelessWidget {
       padding: const EdgeInsets.all(13.0),
       child: Container(
         decoration: BoxDecoration(
-          color: color(100),
-        ),
+            color: color[100], borderRadius: BorderRadius.circular(10)),
         child: Column(
           children: [
             Image.asset(
