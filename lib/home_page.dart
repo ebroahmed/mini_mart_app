@@ -52,7 +52,9 @@ class HomePage extends StatelessWidget {
                 itemCount: value.shopItems.length,
                 padding: EdgeInsets.all(12),
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2),
+                  crossAxisCount: 2,
+                  childAspectRatio: 1 / 1.2,
+                ),
                 itemBuilder: (context, index) {
                   return MartItemTile(
                     itemName: value.shopItems[index][0],
