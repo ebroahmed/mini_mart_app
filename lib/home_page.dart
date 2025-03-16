@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mini_mart_app/components/mart_item_tile.dart';
+import 'package:mini_mart_app/model/cart_model.dart';
+import 'package:provider/provider.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -45,17 +47,20 @@ class HomePage extends StatelessWidget {
               ),
             ),
             Expanded(
-              child: GridView.builder(
+                child: Consumer<CartModel>(builder: (context, value, child) {
+              return GridView.builder(
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2),
                 itemBuilder: (context, index) {
                   return MartItemTile(
-                      itemName: itemName,
-                      itemPrice: itemPrice,
-                      imagePath: imagePath);
+                    itemName: value.shopItems[index][0],
+                    itemPrice: value.shopItems[index][1],
+                    imagePath: value.shopItems[index][2],
+                    color: value.shopItems[index][3],
+                  );
                 },
-              ),
-            )
+              );
+            }))
           ],
         ),
       ),

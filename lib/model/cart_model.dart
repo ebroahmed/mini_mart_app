@@ -7,4 +7,6 @@ class CartModel extends ChangeNotifier {
     ["Banana", "60", "assets/images/banana.jpg", Colors.yellow],
     ["Watermelon", "100", "assets/images/apples.jpg", Colors.green],
   ];
+
+  get shopItems => _shopItems;
 }
