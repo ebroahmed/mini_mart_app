@@ -28,7 +28,8 @@ class HomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24.0),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 24.0, vertical: 10),
               child: Text(
                 "Welcome!",
                 style: GoogleFonts.poppins(fontSize: 17, color: Colors.black87),
@@ -56,7 +57,7 @@ class HomePage extends StatelessWidget {
                   const EdgeInsets.symmetric(horizontal: 24.0, vertical: 15),
               child: Text(
                 'Fresh Items',
-                style: GoogleFonts.montserrat(fontSize: 15),
+                style: GoogleFonts.poppins(fontSize: 15),
               ),
             ),
             Expanded(

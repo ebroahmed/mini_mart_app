@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MartItemTile extends StatelessWidget {
   final String itemName;
@@ -31,14 +32,17 @@ class MartItemTile extends StatelessWidget {
               imagePath,
               height: 80,
             ),
-            Text(itemName),
+            Text(
+              itemName,
+              style: GoogleFonts.poppins(),
+            ),
             MaterialButton(
               onPressed: onPressed,
               color: color[800],
               child: Text(
                 'ETB $itemPrice',
-                style:
-                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                style: GoogleFonts.poppins(
+                    color: Colors.white, fontWeight: FontWeight.bold),
               ),
             )
           ],
