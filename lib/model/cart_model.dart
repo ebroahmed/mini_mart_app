@@ -8,5 +8,27 @@ class CartModel extends ChangeNotifier {
     ["Watermelon", "100", "assets/images/watermelon.jpg", Colors.green],
   ];
 
+//list of cart item
+  List _cartItems = [];
+
   get shopItems => _shopItems;
+  get cartItems => _cartItems;
+
+  void addItemToCart(int index) {
+    _cartItems.add(_shopItems[index]);
+    notifyListeners();
+  }
+
+  void removeFromCart(int index) {
+    _cartItems.removeAt(index);
+    notifyListeners();
+  }
+
+  String calcuateTotal() {
+    double totalPrice = 0;
+    for (int i = 0; i < _cartItems.length; i++) {
+      totalPrice += double.parse(_cartItems[i][1]);
+    }
+    return totalPrice.toStringAsFixed(2);
+  }
 }
