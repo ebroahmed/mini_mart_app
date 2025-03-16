@@ -10,19 +10,33 @@ class CartPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'My Cart',
-          style: GoogleFonts.poppins(fontSize: 30),
-        ),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        iconTheme: IconThemeData(color: Colors.black),
       ),
-      body: Consumer<CartModel>(builder: (context, value, child) {
-        return Column(
-          children: [
-            Expanded(
+      body: Consumer<CartModel>(
+        builder: (context, value, child) {
+          return Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                child: Text(
+                  "My Cart",
+                  style: GoogleFonts.poppins(
+                      fontSize: 30,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+              Expanded(
                 child: ListView.builder(
-                    itemCount: value.cartItems.length,
-                    itemBuilder: (context, index) {
-                      return Container(
+                  itemCount: value.cartItems.length,
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 35, vertical: 10),
+                      child: Container(
                         decoration: BoxDecoration(
                             color: Colors.grey.shade200,
                             borderRadius: BorderRadius.circular(8)),
@@ -38,11 +52,70 @@ class CartPage extends StatelessWidget {
                             icon: Icon(Icons.delete_outline),
                           ),
                         ),
-                      );
-                    }))
-          ],
-        );
-      }),
+                      ),
+                    );
+                  },
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(35.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.green,
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  padding: EdgeInsets.all(24),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Total Price",
+                            style: GoogleFonts.poppins(
+                                color: Colors.green.shade200),
+                          ),
+                          SizedBox(
+                            height: 4,
+                          ),
+                          Text(
+                            'ETB ' + value.calcuateTotal(),
+                            style: GoogleFonts.poppins(
+                                color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold),
+                          )
+                        ],
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.green.shade100),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        padding: EdgeInsets.all(12),
+                        child: Row(
+                          children: [
+                            Text(
+                              "Pay Now",
+                              style: GoogleFonts.poppins(color: Colors.white),
+                            ),
+                            Icon(
+                              Icons.arrow_forward_ios,
+                              size: 16,
+                              color: Colors.white,
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              )
+            ],
+          );
+        },
+      ),
     );
   }
 }
