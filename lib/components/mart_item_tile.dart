@@ -17,13 +17,26 @@ class MartItemTile extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(13.0),
       child: Container(
+        height: 50,
+        width: 50,
         decoration: BoxDecoration(
             color: color[100], borderRadius: BorderRadius.circular(10)),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Image.asset(
               imagePath,
-              height: 64,
+              height: 80,
+            ),
+            Text(itemName),
+            MaterialButton(
+              onPressed: () {},
+              color: color[800],
+              child: Text(
+                'ETB $itemPrice',
+                style:
+                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              ),
             )
           ],
         ),
