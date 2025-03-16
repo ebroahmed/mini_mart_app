@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:mini_mart_app/model/cart_model.dart';
 import 'package:provider/provider.dart';
 
@@ -9,7 +10,10 @@ class CartPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('My Cart'),
+        title: Text(
+          'My Cart',
+          style: GoogleFonts.poppins(fontSize: 30),
+        ),
       ),
       body: Consumer<CartModel>(builder: (context, value, child) {
         return Column(
@@ -25,7 +29,7 @@ class CartPage extends StatelessWidget {
                         child: ListTile(
                           leading: Image.asset(value.cartItems[index][2]),
                           title: Text(value.cartItems[index][0]),
-                          subtitle: Text('ETB' + value.cartItems[index][1]),
+                          subtitle: Text('ETB ' + value.cartItems[index][1]),
                           trailing: IconButton(
                             onPressed: () {
                               Provider.of<CartModel>(context, listen: false)

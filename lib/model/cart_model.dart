@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 class CartModel extends ChangeNotifier {
   final List _shopItems = [
-    ["Apple", "70", "assets/images/apples.jpg", Colors.red],
-    ["Pineapple", "80", "assets/images/pineapple-fruit.jpg", Colors.brown],
-    ["Banana", "60", "assets/images/banana.jpg", Colors.yellow],
-    ["Watermelon", "100", "assets/images/watermelon.jpg", Colors.green],
+    ["Apple", "70", "assets/images/apple.png", Colors.red],
+    ["Pineapple", "80", "assets/images/pineapple-fruit.png", Colors.brown],
+    ["Banana", "60", "assets/images/banana.png", Colors.yellow],
+    ["Watermelon", "100", "assets/images/watermelon.png", Colors.green],
   ];
 
 //list of cart item
-  List _cartItems = [];
+  final List _cartItems = [];
 
   get shopItems => _shopItems;
   get cartItems => _cartItems;

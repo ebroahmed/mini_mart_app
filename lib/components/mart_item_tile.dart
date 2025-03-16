@@ -33,7 +33,7 @@ class MartItemTile extends StatelessWidget {
             ),
             Text(itemName),
             MaterialButton(
-              onPressed: () {},
+              onPressed: onPressed,
               color: color[800],
               child: Text(
                 'ETB $itemPrice',
