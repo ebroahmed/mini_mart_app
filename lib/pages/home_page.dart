@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mini_mart_app/components/mart_item_tile.dart';
 import 'package:mini_mart_app/model/cart_model.dart';
+import 'package:mini_mart_app/pages/cart_page.dart';
 import 'package:provider/provider.dart';
 
 class HomePage extends StatelessWidget {
@@ -12,7 +13,12 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context){return CartPage()}))
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => CartPage(),
+            ),
+          );
         },
         backgroundColor: Colors.black,
         child: Icon(Icons.shopping_bag),

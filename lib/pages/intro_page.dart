@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mini_mart_app/home_page.dart';
+import 'package:mini_mart_app/pages/home_page.dart';
 
 class IntroPage extends StatefulWidget {
   const IntroPage({super.key});

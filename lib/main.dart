@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mini_mart_app/home_page.dart';
-import 'package:mini_mart_app/intro_page.dart';
+import 'package:mini_mart_app/pages/home_page.dart';
+import 'package:mini_mart_app/pages/intro_page.dart';
 import 'package:mini_mart_app/model/cart_model.dart';
 import 'package:provider/provider.dart';
 
