@@ -6,6 +6,8 @@ class CartModel extends ChangeNotifier {
     ["Pineapple", "80", "assets/images/pineapple-fruit.png", Colors.brown],
     ["Banana", "60", "assets/images/banana.png", Colors.yellow],
     ["Watermelon", "100", "assets/images/watermelon.png", Colors.green],
+    ["Orange", "85", "assets/images/orange.png", Colors.orange],
+    ["Mango", "92", "assets/images/mango.png", Colors.yellow],
   ];
 
 //list of cart item
