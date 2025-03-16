@@ -16,7 +16,7 @@ class _IntroPageState extends State<IntroPage> {
   void initState() {
     super.initState();
     // Set a timer to navigate to the ExplorePage after 3 seconds
-    Timer(const Duration(seconds: 5), () {
+    Timer(const Duration(seconds: 6), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => const HomePage()),
@@ -32,12 +32,15 @@ class _IntroPageState extends State<IntroPage> {
         children: [
           SizedBox(height: 20),
           Center(
-            child: SizedBox(
-              width: 30,
-              height: 30,
-              child: CircularProgressIndicator(
-                strokeWidth: 3,
-                valueColor: AlwaysStoppedAnimation<Color>(Colors.green),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 15),
+              child: SizedBox(
+                width: 30,
+                height: 30,
+                child: CircularProgressIndicator(
+                  strokeWidth: 3,
+                  valueColor: AlwaysStoppedAnimation<Color>(Colors.green),
+                ),
               ),
             ),
           ),
